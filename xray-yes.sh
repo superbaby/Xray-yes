@@ -417,20 +417,20 @@ finish() {
 }
 
 update_xray() {
-	bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" - install
+	bash -c "$(curl -L https://gh.api.99988866.xyz/https://github.com/superbaby/Xray-install/raw/main/install-release.sh)" - install
 	ps -ef | sed '/grep/d' | grep -q bin/xray || error "Xray 更新失败"
 	success "Xray 更新成功"
 }
 
 install_xray_beta() {
-	bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" - install --beta
+	bash -c "$(curl -L https://gh.api.99988866.xyz/https://github.com/superbaby/Xray-install/raw/main/install-release.sh)" - install --beta
 	ps -ef | sed '/grep/d' | grep -q bin/xray || error "Xray 更新失败"
 	success "Xray 更新成功"
 }
 
 uninstall_all() {
 	get_info
-	bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" - remove --purge
+	bash -c "$(curl -L https://gh.api.99988866.xyz/https://github.com/superbaby/Xray-install/raw/main/install-release.sh)" - remove --purge
 	rm -rf $info_file
 	success "已卸载 Xray-core"
 	exit 0
@@ -478,7 +478,7 @@ show_configuration() {
 }
 
 switch_to_en() {
-	wget -O xray-yes-en.sh https://github.com/jiuqi9997/Xray-yes/raw/main/xray-yes-en.sh
+	wget -O xray-yes-en.sh https://gh.api.99988866.xyz/https://github.com/superbaby/Xray-install/raw/main/install-release.sh
 	echo "English version: xray-yes-en.sh"
 	sleep 5
 	bash xray-yes-en.sh

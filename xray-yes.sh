@@ -286,7 +286,7 @@ install_acme() {
 
 install_xray() {
 	info "正在安装 Xray"
-	bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" - install
+	bash -c "$(curl -L https://gh.api.99988866.xyz/https://github.com/superbaby/Xray-install/raw/main/install-release.sh)" - install
 	ps -ef | sed '/grep/d' | grep -q bin/xray || error "Xray 安装失败"
 	success "Xray 安装成功"
 }
@@ -396,7 +396,7 @@ xray_restart() {
 }
 
 crontab_xray() {
-	crontab -l | grep -q Xray || echo -e "$(crontab -l)\n0 0 * * * /usr/bin/bash -c \"\$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)\"" | crontab || warning "添加 crontab 定时任务失败"
+	crontab -l | grep -q Xray || echo -e "$(crontab -l)\n0 0 * * * /usr/bin/bash -c \"\$(curl -L https://gh.api.99988866.xyz/https://github.com/superbaby/Xray-install/raw/main/install-release.sh\"" | crontab || warning "添加 crontab 定时任务失败"
 }
 
 finish() {

@@ -9,7 +9,7 @@ VLESS TCP XTLS
 ## 使用
 - 交互式
 ```
-bash -c "$(curl -L https://gh.api.99988866.xyz/https://github.com/superbaby/Xray-yes/raw/main/xray-yes.sh)"
+bash -c "$(curl -L https://gh.api.99988866.xyz/https://raw.githubusercontent.com/superbaby/Xray-yes/main/xray-yes.sh)"
 ```
 
 - 安装
